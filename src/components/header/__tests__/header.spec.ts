@@ -11,12 +11,10 @@ describe("Header", () => {
   it("should set height based on height props", () => {
     const { container } = renderComponent(Header, {
       props: {
-        height: 100,
+        height: 48,
       },
     });
 
-    expect(container.querySelector("#main-header")).toHaveStyle({
-      height: "100px",
-    });
+    expect(container.querySelector("#main-header")?.style?.height).toBe("48px");
   });
 });

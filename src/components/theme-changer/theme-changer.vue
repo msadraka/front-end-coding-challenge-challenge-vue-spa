@@ -2,7 +2,7 @@
   <Button
     class="text-3xl"
     type="button"
-    test-id="themeChanger"
+    data-testid="themeChanger"
     aria-haspopup="true"
     aria-controls="theme-menu"
     @click="toggleTheme"

@@ -50,6 +50,9 @@ describe("Button", () => {
       },
     });
 
-    expect(screen.queryByText(/test/i)).toHaveAttribute("disabled");
+    const buttonElement = screen.queryByText(/test/i);
+
+    expect(buttonElement).not.toBeNull(); // Ensure the element exists
+    expect(buttonElement?.hasAttribute("disabled")).toBe(true);
   });
 });

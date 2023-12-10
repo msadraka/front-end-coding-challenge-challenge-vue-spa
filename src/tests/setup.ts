@@ -5,7 +5,7 @@ import { server } from "@/mocks/server";
 
 const queryCache = new QueryCache();
 
-expect.extend(matchers);
+expect.extend(matchers || []);
 
 // Establish API mocking before all tests.
 beforeAll(() => {
