@@ -21,16 +21,11 @@ describe("RestaurantProperty", () => {
     await nextTick();
 
     expect(screen.queryByText(value)).toBeTruthy();
-    expect(img).toHaveAttribute(
-      "data-theme-icon",
-      themeStore.selectedTheme.value,
-    );
+
+    expect(img?.getAttribute("data-theme-icon")).toBe("dark");
 
     themeStore.setTheme("light");
     await nextTick();
-    expect(container.querySelector("img")).toHaveAttribute(
-      "data-theme-icon",
-      themeStore.selectedTheme.value,
-    );
+    expect(img?.getAttribute("data-theme-icon")).toBe("light");
   });
 });
